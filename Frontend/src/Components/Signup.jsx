@@ -8,7 +8,7 @@ const Signup = () => {
     const [password, setPassword] = useState('');
 
     const handleSignup = async () => {
-        const response = await fetch('https://to-do-app-wheat-two.vercel.app/auth/signup', {
+        const response = await fetch('https://to-do-app-theta-ebon.vercel.app/auth/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password })
