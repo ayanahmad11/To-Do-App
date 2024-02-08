@@ -31,7 +31,7 @@ function InitState() {
     const init = async () => {
         const token = localStorage.getItem("token");
         try {
-            const response = await fetch('http://localhost:3000/auth/me', {
+            const response = await fetch('https://to-do-app-wheat-two.vercel.app/auth/me', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();
