@@ -32,7 +32,21 @@ router.get('/todos', authenticateJwt, (req, res) => {
       res.status(500).json({ error: 'Failed to retrieve todos' });
     });
 });
+router.delete('/todos/:todoId', authenticateJwt, (req, res) => {
+  const { todoId } = req.params;
+  const userId = req.userId;
 
+  Todo.findOneAndDelete({ _id: todoId, userId })
+    .then((deletedTodo) => {
+      if (!deletedTodo) {
+        return res.status(404).json({ error: 'Todo not found' });
+      }
+      res.json({ message: 'Todo deleted successfully' });
+    })
+    .catch((err) => {
+      res.status(500).json({ error: 'Failed to delete todo' });
+    });
+});
 router.patch('/todos/:todoId/done', authenticateJwt, (req, res) => {
   const { todoId } = req.params;
   const userId = req.userId;
