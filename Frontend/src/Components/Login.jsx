@@ -17,7 +17,7 @@ const Login = () => {
     
         if (data.token) {
             localStorage.setItem("token", data.token);
-            window.location = "/todos";
+            window.location.pathname = '/todos'; 
         } else {
             alert("Invalid credentials");
         }
