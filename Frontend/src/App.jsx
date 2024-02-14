@@ -37,12 +37,12 @@ function InitState() {
             const data = await response.json();
             if (data.username) {
                 setAuth({ token: data.token, username: data.username });
-                navigate("/todos");
+                navigate("/todo/todos");
             } else {
-                navigate("/login");
+                navigate("/auth/login");
             }
         } catch (e) {
-            navigate("/login");
+            navigate("/auth/login");
         }
     }
     useEffect(() => {
