@@ -53,7 +53,7 @@ const TodoList = () => {
                 <div style={{marginTop: 25, marginLeft: 20}}>
                     <button onClick={() => {
                         localStorage.removeItem("token");
-                        window.location = "/login";
+                        window.location = "/";
                     }}>Logout</button>
                 </div>
             </div>
