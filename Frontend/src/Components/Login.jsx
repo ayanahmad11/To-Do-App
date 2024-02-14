@@ -11,16 +11,18 @@ const Login = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password })
         });
-        console.log(await response.json())
-        // Todo: Create a type for the response that you get back from the server
-        const data = await response.json();
+    
+        const data = await response.json(); // Parse response body only once
+        console.log(data);
+    
         if (data.token) {
-            localStorage.setItem("token", data.token)
-            window.location = "/todo/todos";
+            localStorage.setItem("token", data.token);
+            window.location = "/todos";
         } else {
-            alert("invalid credentials");
+            alert("Invalid credentials");
         }
     };
+    
 
     return (
         <div style={{justifyContent: "center", display: "flex", width: "100%"}}>
