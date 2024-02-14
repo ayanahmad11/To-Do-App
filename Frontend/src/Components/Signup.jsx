@@ -17,7 +17,7 @@ const Signup = () => {
         const data = await response.json();
         if (data.token) {
             localStorage.setItem("token", data.token)
-            window.location = "/todos";
+            window.location = "/";
         } else {
             alert("Error while signing up");
         }
