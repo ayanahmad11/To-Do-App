@@ -16,7 +16,7 @@ const Login = () => {
         const data = await response.json();
         if (data.token) {
             localStorage.setItem("token", data.token)
-            window.location = "/";
+            window.location = "/todo/todos";
         } else {
             alert("invalid credentials");
         }
