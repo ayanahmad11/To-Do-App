@@ -63,8 +63,8 @@ const TodoList = () => {
             <button onClick={addTodo} style={{ backgroundColor: '#388e3c', color: '#fff', border: 'none', padding: '10px 20px', borderRadius: '4px', cursor: 'pointer' }}>Add Todo</button>
             {todos.map((todo) => (
                 <div key={todo._id} style={{ backgroundColor: '#fff', marginTop: '20px', padding: '10px', borderRadius: '4px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)' }}>
-                    <h3 style={{ margin: '0' }}>{todo.title}</h3>
-                    <p style={{ marginTop: '5px', marginBottom: '10px' }}>{todo.description}</p>
+                    <h3 style={{ margin: '0', color: '#333' }}>{todo.title}</h3>
+                    <p style={{ marginTop: '5px', marginBottom: '10px', color: '#666' }}>{todo.description}</p>
                     <button onClick={() => markDone(todo._id)} style={{ backgroundColor: todo.done ? '#757575' : '#1976d2', color: '#fff', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer', marginRight: '10px' }}>{todo.done ? 'Done' : 'Mark as Done'}</button>
                     <button onClick={() => deleteTodo(todo._id)} style={{ backgroundColor: '#d32f2f', color: '#fff', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}>Delete</button>
                 </div>
@@ -74,6 +74,7 @@ const TodoList = () => {
 };
 
 export default TodoList;
+
 
 // import React, { useContext, useState, useEffect } from 'react';
 // import { authState } from '../store/authState.js';
