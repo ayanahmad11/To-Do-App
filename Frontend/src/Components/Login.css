@@ -27,7 +27,7 @@ input[type='password'] {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    color: #333; /* Ensure text color is visible */
+    color: #f5f0f0; /* Ensure text color is visible */
 }
 
 button {
