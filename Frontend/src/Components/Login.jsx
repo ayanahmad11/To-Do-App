@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css'; // Import CSS file for styling
+import Header from './Header';
+
+
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -27,8 +30,9 @@ const Login = () => {
     };
     
 
-    return (
-        <div className="login-container">
+    return ( <div>
+        <Header />
+        {  <div className="login-container">
             <div className="login-box">
                 <h2>Login</h2>
                 <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} placeholder='Username' />
@@ -39,7 +43,9 @@ const Login = () => {
                     New here? <Link to="/signup">Signup</Link>
                 </div>
             </div>
-        </div>
+        </div>/* Your Todo List component content */}
+    </div>
+      
     );
 };
 

@@ -4,6 +4,7 @@
     align-items: center;
     height: 100vh;
     background-color: #f5f5f5;
+    color: #333; /* Ensure text color is visible */
 }
 
 .login-box {
@@ -16,7 +17,7 @@
 
 h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: #333; /* Ensure text color is visible */
 }
 
 input[type='text'],
@@ -24,8 +25,9 @@ input[type='password'] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid hwb(0 80% 20%);
+    border: 1px solid #ccc;
     border-radius: 4px;
+    color: #333; /* Ensure text color is visible */
 }
 
 button {
@@ -45,6 +47,7 @@ button:hover {
 .signup-link {
     margin-top: 20px;
     font-size: 14px;
+    color: #333; /* Ensure text color is visible */
 }
 
 .signup-link a {
